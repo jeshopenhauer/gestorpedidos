@@ -1,0 +1,27 @@
+.dhl-floating-button {
+    position: fixed;
+    right: 20px;
+    bottom: 60px;
+    background: #FFCC00; /* Amarillo DHL */
+    color: #D40511;      /* Rojo DHL */
+    border: none;
+    border-radius: 10%;
+    padding: 15px 15px;
+    font-size: 20px;
+    font-family:  sans-serif;
+    font-weight: bold;
+    letter-spacing: 2.5px; /* Espaciado entre letras */
+    cursor: pointer;
+    z-index: 999;
+    transition: all 0.3s ease;
+    opacity: 0.95;
+    display: flex;
+    align-items: center;
+}
+
+.dhl-floating-button:hover {
+    background: #FFD600;
+    opacity: 1;
+    transform: translateY(-2px) scale(1.04); /* Salta y se agranda un poco */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}

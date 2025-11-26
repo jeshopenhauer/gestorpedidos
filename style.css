@@ -1,0 +1,491 @@
+        
+         
+         /* CARACTER GLOBAL */
+         * {
+            font-family:  sans-serif;
+            box-sizing: border-box;
+            border-radius: 7px;
+            line-height: 1.5;
+        }
+        
+
+        /* FONDO DE ATRAS */
+        
+        body {
+            
+            background-color: whitesmoke;
+            line-height: 1;
+        }
+
+        .container {
+            max-width: 90%;  
+            margin: 0 auto;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            background: white;
+            padding: 20px;      
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); 
+        }
+
+        .header h1 {
+            color: royalblue;
+            font-size: 2rem;
+            margin: 0;
+
+        }
+
+        /*    Botones del sistema    */
+
+        .btn {
+            background: cornflowerblue; 
+            color: white;
+            border: none;
+            padding: 10px 10px;
+            cursor: pointer;
+            font-size: 14px;
+            
+        }
+
+        .btn:hover {
+            background: royalblue;
+        }
+
+        .btn-secondary {
+            background: darkgrey;
+        }
+
+        .btn-secondary:hover {
+            background: grey;
+        }
+
+        .btn-success {
+            background: mediumseagreen;
+        }
+
+        .btn-success:hover {
+            background: darkgreen;
+        }
+
+        .btn.btn-terciary {
+        background-color: pink; /* Rojo claro */
+        color: red; /* Texto rojo oscuro */
+        border: 1px solid pink; /* Borde rojo claro */
+        transition: background-color 0.3s, color 0.3s; /* Animación suave */
+        }
+
+        .btn.btn-terciary:hover {
+        background-color: red; /* Rojo intenso */
+        color: white; /* Texto blanco */
+        border-color: red; /* Borde rojo intenso */
+        }
+
+
+
+
+
+
+        /* PANEL DE PEDIDOS */
+    
+
+        .pedido-card {
+            border: none;
+            padding: 50px;          /* Aumentado de 20px */
+            margin-bottom: 20px;    /* Aumentado de 20px */
+            background: white;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .pedido-card.completado {
+            background: honeydew;
+            
+            border: 2px solid #009236;  
+            box-shadow: 0 4px 12px rgba(34, 197, 94, 0.15);
+        }
+
+     
+        .pedido-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 60px;    /* Aumentado de 15px */
+        }
+
+
+        /* TITULOS DE LAS TARJETAS DE PEDIDO */
+
+        .pedido-info h3 {
+            color: #1f2937;
+            margin: 1;
+            font-size: 1.4rem;      
+        }
+
+        /* FECHA Y PRECIO  */
+        .pedido-info p {
+            color: gray;
+            font-size: 20px;
+        }
+
+        .pedido-actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .btn-icon {
+            background: lightgray;
+            border: 1px solid  lightslategray;
+            padding: 5px 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+       
+
+        .timeline {
+            position: relative;
+            display: flex;
+        }
+
+        .timeline-line {
+            position: absolute;
+            top: 35%;
+            left: 50px;          /* Aumentado de 20px */
+            right: 50px;         /* Aumentado de 20px */
+            height: 1px;         /* Aumentado de 2px */
+            background: lightgray;
+            z-index: 1;
+        }
+
+        .timeline-step {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;
+            padding: 20px 0;
+        }
+
+        .timeline-circle {
+            width: 45px;         /* Aumentado de 40px */
+            height: 45px;        /* Aumentado de 40px */
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 16px;     /* Aumentado de 14px */
+            background: #e5e7eb;
+            color: #6b7280;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Añadido */
+        }
+
+        .timeline-circle.active {
+            background: mediumseagreen;
+            color: white;
+            transform: scale(1.1); /* Añadido */
+        }
+
+   
+        .timeline-label {
+            margin-top: 10px;    /* Aumentado de 8px */
+            font-size: 13px;     /* Aumentado de 12px */
+            text-align: center;
+            color: grey;
+        }
+
+    
+        .navigation-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            padding: 20px 0px;
+        }
+
+        .detalles-panel {
+            
+            padding-top: 20px;
+            margin-top: 10px;
+            display: none;
+        }
+
+        .detalles-panel.show {
+            display: block;
+        
+        }
+
+     /*       PDFS              */
+                    
+        .pdf-tags {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        .pdf-tag {
+            background: #f3f4f6;
+            color: #374151;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            border: 1px solid #d1d5db;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: inline-block;
+        }
+
+        .pdf-tag:hover {
+            background: #e5e7eb;
+            border-color: #9ca3af;
+            transform: translateY(-1px);
+        }
+
+        .pdf-tag.clickable {
+            background: #dbeafe;
+            border-color: #93c5fd;
+            color: #1d4ed8;
+        }
+
+        .pdf-tag.clickable:hover {
+            background: #bfdbfe;
+            border-color: #60a5fa;
+        }
+
+
+        /*  NOTAS */
+
+
+        .nota-item {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            padding: 12px;
+            margin-bottom: 8px;
+            border-left: 4px solid #3b82f6;
+        }
+
+        .nota-fecha {
+            font-size: 11px;
+            color: #64748b;
+            font-weight: 500;
+            margin-bottom: 6px;
+        }
+
+        .nota-texto {
+            font-size: 13px;
+            color: #374151;
+            line-height: 1.4;
+        }
+
+        .sin-notas {
+            color: #9ca3af;
+            font-style: italic;
+            font-size: 13px;
+            margin: 0;
+        }
+
+        .nota-eliminar:hover {
+            background: #fca5a5 !important;
+            border-color: #f87171 !important;
+            transform: scale(1.1);
+        }
+
+        /*      crear pedido modal            */ 
+
+        .form-group {
+            margin-bottom: 15px;
+            width: 100%;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: black;
+        } 
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid lightgray;
+            border-radius: 6px;
+            font-size: 14px;
+            font-family: sans-serif;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: royalblue;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+
+        .pieces-container {
+            border: 1px solid lightgray;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 30px 0;
+            background: white;
+            min-height: 350px;
+            width: 100%;
+        }
+
+        #pieces-grid {
+            width: 100%;
+        }
+
+        .piece-row {
+            display: grid;
+            grid-template-columns: 10% 20% 10% 10% 12% 10% 5%;
+            gap: 4%;
+            align-items: center;
+            margin-bottom: 15px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+            border: 1px solid lightgray;
+            width: 100%;
+        }
+
+        .piece-row input {
+            padding: 12px 15px;
+            border: 1px solid lightgray;
+            border-radius: 6px;
+            font-size: 14px;
+            width: 100%;
+            box-sizing: border-box;
+            transition: border-color 0.2s ease;
+        }
+
+        .piece-row input[type="number"] {
+            text-align: center;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .piece-row input:focus {
+            outline: none;
+            border-color: royalblue;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+
+        .total-row {
+            text-align: right;
+            font-weight: bold;
+            font-size: 16px;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 2px solid #e5e7eb;
+            color: green;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 2% auto;
+            padding: 30px;
+            border-radius: 12px;
+            width: 98%;
+            max-width: 1400px;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            
+        }
+
+        .close {
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover {
+            color: #000;
+        }
+
+       
+
+        
+        /* añadir piezas en crear pedido es esto */
+        
+        .panel-header {
+                display: flex;
+                justify-content: flex-end;   
+                align-items: center;         
+                gap: 10px;                   
+                margin-bottom: 20px;
+        }
+
+
+
+        .hidden-input {
+            display: none;
+        }
+
+        
+
+        .pieces-header-row {
+            background: royalblue;
+            color: white;
+        
+        }
+
+        .pieces-header-cell {
+            padding: 12px 15px;
+        }
+
+        .add-piece-btn {
+            margin-top: 15px;
+        }
+
+        .form-actions {
+            display: flex;
+            gap: 15px;
+            justify-content: flex-end;
+            margin-top: 30px;
+        }
+
+        .sd-textarea {
+            flex: 1;
+            resize: vertical;
+            font-family: sans-serif;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        
+
+       
